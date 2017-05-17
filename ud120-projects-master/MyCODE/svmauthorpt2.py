@@ -29,10 +29,10 @@ from sklearn.svm import LinearSVC
 from sklearn.metrics import accuracy_score
 
 #only 1% of the features, but over 88% the performance?  Not too shabby!
-#features_train = features_train[:len(features_train)/100]
-#labels_train = labels_train[:len(labels_train)/100]
+features_train = features_train[:len(features_train)/100]
+labels_train = labels_train[:len(labels_train)/100]
 
-clf = SVC(kernel='linear')
+clf = SVC(kernel='rbf')
 #FIT AND TRAIN
 print("attempting to fit")
 t0 = time() #START TIMER
